@@ -1,88 +1,100 @@
-# Retail Sales Data Warehouse and Analytics Project
-
-This repository contains a complete end-to-end project involving the design and development of a **Retail Sales Data Warehouse** along with **Data Analytics and Visualization**. The project demonstrates how raw transactional data is transformed, modeled, and used for analytical reporting through a multi-layered data architecture and dashboarding.
+# Gold Layer Data Warehouse Views & Quality Checks
 
 ---
 
-## 🏗️ Project Structure
+## Overview
 
-This project is divided into two main parts:
+This project contains SQL scripts to build and maintain the **Gold layer** in a data warehouse, representing the final star-schema views for analytics and reporting.
 
-1. **Data Warehouse (DW)**
-2. **Data Analytics (DA)**
+The scripts include:
 
----
-
-## 📦 Part 1: Data Warehouse (SQL-Based)
-
-### Objective
-
-To create a robust data warehouse architecture that transforms raw sales data into meaningful, structured data across **Bronze**, **Silver**, and **Gold** layers for efficient analytics.
-
-### Data Source
-
-Simulated retail transactional data including:
-- Customers
-- Products
-- Stores
-- Orders
-- Payments
-- Shipments
-
-### Architecture Overview
-
-- **Bronze Layer**: Raw data loaded into staging tables as-is.
-- **Silver Layer**: Cleaned and transformed data using joins and business logic.
-- **Gold Layer**: Analytical tables including KPIs and aggregated metrics for reporting.
-
-### SQL Implementation Highlights
-
-- Created relational schemas with primary and foreign key constraints.
-- Handled missing values and duplicates during Silver layer transformation.
-- Built calculated fields like `Total_Sales`, `Profit_Margin`, `Customer_Lifetime_Value`.
-- Used views to modularize complex transformations.
-
-### ER Diagram
-
-*(Include a screenshot or link to your ERD if available)*
+- Creation of **Dimension** and **Fact** views in the Gold layer.
+- **Quality checks** to validate data integrity, uniqueness, and consistency.
+- Additional quality checks on the **Silver layer** for data standardization and correctness.
 
 ---
 
-## 📊 Part 2: Data Analytics and Dashboard
+## Contents
 
-### Objective
+### 1. Gold Layer Views
 
-To perform analytical queries on the Gold Layer and create visualizations that deliver insights for business decision-making.
+- `gold.dim_customers`: Customer dimension view combining CRM and ERP data with a surrogate key.
+- `gold.dim_products`: Product dimension view enriched with category details.
+- `gold.fact_sales`: Sales fact view linking customers and products with sales transactions.
 
-### Key Metrics and Insights
-
-- Monthly Sales Trends
-- Top Performing Products and Categories
-- Revenue by Region and Store
-- Customer Segmentation by Purchase Behavior
-- Order Fulfillment and Shipment Delays
-- Payment Method Distribution
-
-### Tools Used
-
-- **SQL**: For querying data from the Gold Layer.
-- **Power BI / Tableau / Excel**: For dashboard creation and interactive reporting.
-- *(Update based on what tool you used)*
-
-### Sample Dashboard
-
-*(Add screenshots of the dashboard or a link to your BI file/report)*
+These views provide business-ready datasets by transforming and joining Silver layer tables.
 
 ---
 
-## 💡 Key Learnings
+### 2. Gold Layer Quality Checks
 
-- Structured approach to building a data warehouse from scratch.
-- Data transformation best practices using SQL.
-- Designing analytical views for real-world business needs.
-- Creating impactful dashboards from model-driven datasets.
+This script performs critical validations:
+
+- Uniqueness of surrogate keys in dimension tables (`customer_key`, `product_key`).
+- Referential integrity between the fact and dimension views.
+- Ensures no orphaned records exist in sales facts.
 
 ---
 
-## 📁 Folder Structure
+### 3. Silver Layer Quality Checks
+
+Scripts to validate source Silver layer data quality, including:
+
+- Null or duplicate primary keys.
+- Unwanted spaces in string fields.
+- Standardization of categorical values.
+- Validation of date ranges and date logic.
+- Data consistency checks such as sales amount calculation validation.
+
+---
+
+## Additional Files
+
+### `.gitignore`
+
+- Excludes files like temporary logs, caches, environment files, IDE settings, and OS-generated files.
+- Helps keep the Git repository clean and secure by avoiding unnecessary or sensitive files.
+
+### `LICENSE` (MIT License)
+
+- Open source license allowing free use, modification, and distribution with attribution.
+- Provides liability and warranty disclaimers for contributors.
+
+---
+
+## Usage
+
+1. **Create Views:**
+
+   Run the Gold layer DDL script to create/update the dimension and fact views.
+
+2. **Perform Quality Checks:**
+
+   Execute the quality check scripts after loading data into the Silver and Gold layers to ensure data consistency and integrity.
+
+3. **Investigate Issues:**
+
+   Review any errors or anomalies reported by quality checks and resolve them in source data or transformation logic.
+
+---
+
+## Notes
+
+- The scripts assume existence of source Silver layer tables with the specified schemas.
+- Adjust table names and schemas as per your environment if necessary.
+- Maintain the `.gitignore` file to prevent sensitive or irrelevant files from being committed.
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Contact
+
+For questions or support, please reach out to the project maintainer.
+
+---
 
