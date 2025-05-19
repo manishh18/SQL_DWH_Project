@@ -1,0 +1,33 @@
+# Byte-compiled / cached
+__pycache__/
+*.py[cod]
+*$py.class
+
+# SQL tools
+*.db
+*.sqlite3
+
+# Environment files
+.env
+*.env
+
+# IDE / Editor folders
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Dependency files
+*.bak
+*.swp
+
+# Node (if using any tooling)
+node_modules/
