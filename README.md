@@ -1,100 +1,56 @@
-# Gold Layer Data Warehouse Views & Quality Checks
+# Retail Sales Data Warehouse and Analytics Project
+
+This project demonstrates the process of building a basic retail sales data warehouse and conducting insightful analytics using structured SQL and visualization tools.
 
 ---
 
-## Overview
+## Part 1: Data Warehouse
 
-This project contains SQL scripts to build and maintain the **Gold layer** in a data warehouse, representing the final star-schema views for analytics and reporting.
+### Objective
+To create a structured, multi-layered data architecture that organizes and processes raw retail data for easy access and reporting.
 
-The scripts include:
+### Structure
 
-- Creation of **Dimension** and **Fact** views in the Gold layer.
-- **Quality checks** to validate data integrity, uniqueness, and consistency.
-- Additional quality checks on the **Silver layer** for data standardization and correctness.
+The data warehouse is organized into the following layers:
 
----
+- **Bronze Layer**: Contains raw imported datasets with minimal transformation.
+- **Silver Layer**: Applies cleaning, standardization, and filtering on Bronze data. This is the refined intermediate data layer.
+- **Gold Layer**: The final reporting layer containing aggregated and business-ready data (KPIs, summary tables, etc.)
 
-## Contents
+### Key Processes
 
-### 1. Gold Layer Views
+- Data ingestion and storage using SQL scripts in the `SQL_Scripts/` folder.
+- Data cleaning and transformations for:
+  - Customer and product data
+  - Sales transactions
+  - Regional mappings
+- Joins and aggregations to prepare datasets for analysis and dashboarding.
 
-- `gold.dim_customers`: Customer dimension view combining CRM and ERP data with a surrogate key.
-- `gold.dim_products`: Product dimension view enriched with category details.
-- `gold.fact_sales`: Sales fact view linking customers and products with sales transactions.
+### Output
 
-These views provide business-ready datasets by transforming and joining Silver layer tables.
+The output of this pipeline is a set of clean, structured tables containing key performance metrics such as:
 
----
-
-### 2. Gold Layer Quality Checks
-
-This script performs critical validations:
-
-- Uniqueness of surrogate keys in dimension tables (`customer_key`, `product_key`).
-- Referential integrity between the fact and dimension views.
-- Ensures no orphaned records exist in sales facts.
-
----
-
-### 3. Silver Layer Quality Checks
-
-Scripts to validate source Silver layer data quality, including:
-
-- Null or duplicate primary keys.
-- Unwanted spaces in string fields.
-- Standardization of categorical values.
-- Validation of date ranges and date logic.
-- Data consistency checks such as sales amount calculation validation.
+- Total sales by product and region
+- Monthly trends
+- Customer segmentation
+- Revenue tracking
 
 ---
 
-## Additional Files
+## Part 2: Data Analytics
 
-### `.gitignore`
+### Objective
+To derive actionable insights and create visual dashboards using the curated data from the Gold Layer.
 
-- Excludes files like temporary logs, caches, environment files, IDE settings, and OS-generated files.
-- Helps keep the Git repository clean and secure by avoiding unnecessary or sensitive files.
+### Contents
 
-### `LICENSE` (MIT License)
+- The `SQL_Data_Analytics/` folder includes scripts and queries used to perform business analysis.
+- Visualizations and dashboards show:
+  - Time-series sales performance
+  - Best-selling products and categories
+  - Region-wise sales comparison
+  - Customer behavior patterns
 
-- Open source license allowing free use, modification, and distribution with attribution.
-- Provides liability and warranty disclaimers for contributors.
+### Tools Used
 
----
-
-## Usage
-
-1. **Create Views:**
-
-   Run the Gold layer DDL script to create/update the dimension and fact views.
-
-2. **Perform Quality Checks:**
-
-   Execute the quality check scripts after loading data into the Silver and Gold layers to ensure data consistency and integrity.
-
-3. **Investigate Issues:**
-
-   Review any errors or anomalies reported by quality checks and resolve them in source data or transformation logic.
-
----
-
-## Notes
-
-- The scripts assume existence of source Silver layer tables with the specified schemas.
-- Adjust table names and schemas as per your environment if necessary.
-- Maintain the `.gitignore` file to prevent sensitive or irrelevant files from being committed.
-
----
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-## Contact
-
-For questions or support, please reach out to the project maintainer.
-
----
-
+- SQL (microsoft sql server management studio) 
