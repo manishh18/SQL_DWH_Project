@@ -1,4 +1,4 @@
-![Sales Dashboard](Dashboard/Sales_Dashboard.png)
+![Sales Dashboard](Dashboard/Sales _Dashboard.png)
 ![Customer Dashboard](Dashboard/Customer_Dashboard.png)
 ![Filter Example](Dashboard/Filtter.png)
 # Retail Sales Data Warehouse and Analytics Project
