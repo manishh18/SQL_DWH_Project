@@ -1,5 +1,5 @@
 
-![Sales Dashboard](Dashboards/Sales_Dashboard.png)
+![Sales Dashboard](Dashboard/Sales _Dashboard.png)
 # Retail Sales Data Warehouse and Analytics Project
 
 This project demonstrates the process of building a basic retail sales data warehouse and conducting insightful analytics using structured SQL and visualization tools.
