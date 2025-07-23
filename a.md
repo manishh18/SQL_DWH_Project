@@ -151,19 +151,19 @@ Interactive dashboards provide a visual interface to explore the data warehouse'
 
 This dashboard provides a comprehensive view of sales performance, including total sales, sales trends over time, sales by product category, and regional sales distribution.
 
-![Sales Dashboard](Dashboards/Sales%20Dashboard.png)
+![Sales Dashboard](Dashboards/Sales Dashboard.png)
 
 #### Customer Dashboard
 
 The customer dashboard offers insights into customer behavior, top customers, customer segmentation, and geographical distribution of customers.
 
-![Customer Dashboard](Dashboards/Customer%20Dashboard.png)
+![Customer Dashboard](Dashboards/Customer Dashboard.png)
 
 #### Dashboard Filter Example
 
 Dashboards often include various filters to allow users to drill down and customize their view. Here's an example of a filter being applied:
 
-![Filter Example](Dashboards/Filter_Example.png)
+![Filter Example](Dashboards/Sales Dashboard (1).png)
 
 ## Documentation & Architecture
 
@@ -187,8 +187,7 @@ The `docs/` directory contains essential project documentation and architectural
     [View Naming Conventions](docs/naming_conventions.md)
 * **Project Planning:** Original planning document for the project.
     [View Project Planning](SQL%20Data%20Warehouse%20Project%20Planning%20Notion.pdf)
-* **SQL Data Analytics Roadmap:** Overview of the analytical roadmap.
-    ![SQL Data Analytics Roadmap](SQL_Data_Analytics/Roadmap.png)
+
 
 ## Contributing
 
