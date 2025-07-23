@@ -190,6 +190,9 @@ The `docs/` directory contains essential project documentation and architectural
 
 Contributions are welcome! If you have suggestions for improvements, bug fixes, or new features, please open an issue or submit a pull request.
 
+## Acknowledgments
+
+This project was inspired by Data with Baraa 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
