@@ -17,7 +17,6 @@ The core objective is to provide a robust and scalable data foundation for infor
 * **Data Quality Checks:** SQL scripts for validating data integrity and quality at various stages.
 * **SQL-based Data Analytics:** A comprehensive set of SQL queries for various analytical tasks (e.g., trend analysis, ranking, segmentation, reporting).
 * **Interactive Tableau Dashboards:** Visualizations built on top of the Gold layer to offer dynamic insights into sales and customer data.
-
 ## Project Structure
 
 sql_dwh_project/
