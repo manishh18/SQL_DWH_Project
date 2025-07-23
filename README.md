@@ -1,5 +1,5 @@
 # SQL Data Warehouse Project: Sales & Customer Analytics
-
+Dashboard Link :- https://public.tableau.com/views/SQL_17532615353360/SalesDashboard?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 ## Project Overview
 
 This project demonstrates the design, implementation, and analysis of a SQL Data Warehouse (DWH) focused on sales and customer data. It involves integrating data from various sources (ERP and CRM), transforming it into a structured format, and building analytical reports and interactive dashboards to drive business insights.
