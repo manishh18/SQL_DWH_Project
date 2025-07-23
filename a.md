@@ -157,7 +157,7 @@ This dashboard provides a comprehensive view of sales performance, including tot
 
 The customer dashboard offers insights into customer behavior, top customers, customer segmentation, and geographical distribution of customers.
 
-![Customer Dashboard](Dashboards/Customer Dashboard.png)
+![Customer Dashboard](Dashboard/Customer Dashboard.png)
 
 #### Dashboard Filter Example
 
