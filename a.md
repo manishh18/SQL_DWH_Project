@@ -151,19 +151,19 @@ Interactive dashboards provide a visual interface to explore the data warehouse'
 
 This dashboard provides a comprehensive view of sales performance, including total sales, sales trends over time, sales by product category, and regional sales distribution.
 
-![Sales Dashboard](Dashboard/Sales _Dashboard.png)
+![Sales Dashboard](Dashboard/Sales_Dashboard.png)
 
 #### Customer Dashboard
 
 The customer dashboard offers insights into customer behavior, top customers, customer segmentation, and geographical distribution of customers.
 
-![Customer Dashboard](Dashboard/Customer Dashboard.png)
+![Customer Dashboard](Dashboard/Customer_Dashboard.png)
 
 #### Dashboard Filter Example
 
 Dashboards often include various filters to allow users to drill down and customize their view. Here's an example of a filter being applied:
 
-![Filter Example](Dashboards/Sales Dashboard (1).png)
+![Filter Example](Dashboard/Filtter.png)
 
 ## Documentation & Architecture
 
@@ -171,8 +171,6 @@ The `docs/` directory contains essential project documentation and architectural
 
 * **Overall Data Architecture:** A high-level view of the entire data pipeline.
     ![Data Architecture](docs/data_architecture.png)
-* **ETL Process Flow:** Visualizing the Extract, Transform, Load operations.
-    ![ETL Process](docs/ETL.png)
 * **Data Flow:** Illustrates the movement of data between different components.
     ![Data Flow](docs/data_flow.png)
 * **Data Integration:** Details on how data from various sources is integrated.
