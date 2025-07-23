@@ -151,7 +151,7 @@ Interactive dashboards provide a visual interface to explore the data warehouse'
 
 This dashboard provides a comprehensive view of sales performance, including total sales, sales trends over time, sales by product category, and regional sales distribution.
 
-![Sales Dashboard](Dashboards/Sales Dashboard.png)
+![Sales Dashboard](Dashboard/Sales _Dashboard.png)
 
 #### Customer Dashboard
 
